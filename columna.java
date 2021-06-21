@@ -12,7 +12,7 @@ public class columna
     int id = 0;
     ArrayList actividades = new ArrayList();
     
-    public columna(String nombre_, int id, ArrayList tareas){
+    public columna( int id, String nombre_, ArrayList tareas){
         actividades = tareas;
         nombre = nombre_;
     }

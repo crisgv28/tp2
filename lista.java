@@ -11,12 +11,20 @@ public class lista
     int id = 0;
     String nombre = "";
     String descripcion = "";
-    ArrayList tareas = new ArrayList();
+    ArrayList<tarea> tareas = new ArrayList<tarea>();
     
     public lista(int identificador, String nombre_, String descripcion_){
         id = identificador;
         nombre = nombre_;
         descripcion = descripcion_;
+    }
+    
+    public String darNombre(){
+        return nombre;
+    }
+    
+    public String darDescripcion(){
+        return descripcion;
     }
     
     public void anadirTarea(tarea t){
@@ -32,6 +40,6 @@ public class lista
     }
     
     public String consultarTarea(tarea t){
-        return t.consultarEstado(t);
+        return t.consultarEstado();
     }
 }

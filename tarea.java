@@ -12,7 +12,7 @@ public class tarea
     String nombre = "";
     String fecha_inicio = "";
     String fecha_fin = "";
-    ArrayList responsables = new ArrayList();
+    ArrayList<colaborador> responsables = new ArrayList<colaborador>();
     String estimacion = "";
     String grado_avance = "";
     String estado = "";
@@ -39,8 +39,20 @@ public class tarea
         estado = nuevo_estado;
     }
     
-    public String consultarEstado(tarea t){
+    public String consultarEstado(){
         return estado;
+    }
+    
+    public String darTarea(){
+        return nombre;
+    }
+    
+    public String darColaboradores(){
+        String s = "";
+        for(colaborador c : responsables){
+            s += c.darNombre() + " / ";
+        }
+        return s;
     }
     
 }
